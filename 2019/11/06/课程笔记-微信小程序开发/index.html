@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>[课程笔记] 微信小程序开发 - Sam&#39;s Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="本文为Udacity微信小程序开发课程的笔记。
+Hello World注册账号小程序基础
+微信开发者工具
+WXML
+WXSS
+
+天气小程序
+小程序基础课程，将讲授如何从0搭建天气小程序的过程。
+
+使,"> 
+    <meta name="author" content="Sam Chen, chenzhenghe"> 
+    <link rel="alternative" href="atom.xml" title="Sam&#39;s Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+    <link rel="stylesheet" href="/css/obsidian.css">
+    <link rel="stylesheet" href="/css/ball-atom.min.css">
+</head>
+</html>
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Sam&#39;s Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://chenzhenghe.com">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">[课程笔记] 微信小程序开发</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/课程笔记"><b>「
+                    </b>课程笔记<b> 」</b></a>
+                
+                November 06, 2019
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2019/11/06/课程笔记-微信小程序开发/" title="[课程笔记] 微信小程序开发">[课程笔记] 微信小程序开发</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    72k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    1:05
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/js/">js</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <p>本文为Udacity<a href="&quot;https://cn.udacity.com/course/wechat-mini-program-nanodegree--nd666-cn&quot;">微信小程序开发</a>课程的笔记。</p>
+<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><h2 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h2><h2 id="小程序基础"><a href="#小程序基础" class="headerlink" title="小程序基础"></a>小程序基础</h2><ul>
+<li>微信开发者工具</li>
+<li>WXML</li>
+<li>WXSS</li>
+</ul>
+<h1 id="天气小程序"><a href="#天气小程序" class="headerlink" title="天气小程序"></a>天气小程序</h1><blockquote>
+<p>小程序基础课程，将讲授如何从0搭建天气小程序的过程。</p>
+</blockquote>
+<h2 id="使用网络数据"><a href="#使用网络数据" class="headerlink" title="使用网络数据"></a>使用网络数据</h2><h2 id="构建列表"><a href="#构建列表" class="headerlink" title="构建列表"></a>构建列表</h2><h2 id="第二个页面"><a href="#第二个页面" class="headerlink" title="第二个页面"></a>第二个页面</h2><h2 id="获取位置"><a href="#获取位置" class="headerlink" title="获取位置"></a>获取位置</h2><h1 id="商城小程序"><a href="#商城小程序" class="headerlink" title="商城小程序"></a>商城小程序</h1><blockquote>
+<p>小程序进阶课程，将讲授如何从0搭建商城小程序的过程。</p>
+</blockquote>
+<h2 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h2><blockquote>
+<p>将于之后更新。</p>
+</blockquote>
+<h2 id="详情页"><a href="#详情页" class="headerlink" title="详情页"></a>详情页</h2><h3 id="使用云函数"><a href="#使用云函数" class="headerlink" title="使用云函数"></a>使用云函数</h3><ol>
+<li><p>检查 <code>package.json</code> 中 是否包含 <code>cloudfunctionRoot: &quot;cloundfunctions/&quot;</code> </p>
+</li>
+<li><p>在文件区域上方找到 <code>cloudfunctions(云文件夹)</code></p>
+</li>
+</ol>
+<ul>
+<li>右键，新建云函数</li>
+</ul>
+<ol start="3">
+<li>编辑云函数内容</li>
+</ol>
+<ul>
+<li><code>context</code>: 监控信息</li>
+<li><code>event</code>: 事件参数 <ul>
+<li>自定义的参数: variable1, variable2</li>
+<li>用户信息：appId, openId, …</li>
+</ul>
+</li>
+</ul>
+<p><em>注意：每次执行云函数时，需要右键重新上传部署(Upload&amp;deploy)</em></p>
+<h3 id="在details-js文件onLoad生命周期函数中"><a href="#在details-js文件onLoad生命周期函数中" class="headerlink" title="在details.js文件onLoad生命周期函数中"></a>在<code>details.js</code>文件<code>onLoad</code>生命周期函数中</h3><ol>
+<li><p>数据加载提示</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.showLoading(&#123;</span><br><span class="line">      title: <span class="string">'Loading...'</span>,</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>云函数调取商品信息(含错误处理)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">wx.cloud.callFunction(&#123;</span><br><span class="line">      name: <span class="string">'productDetail'</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        id: options.id</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;).then(<span class="function"><span class="params">result</span> =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">      wx.hideLoading()</span><br><span class="line">      <span class="keyword">const</span> data = result.result</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (data) &#123;</span><br><span class="line">        <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">          product: data</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">          wx.navigateBack()</span><br><span class="line">        &#125;, <span class="number">2000</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(err)</span><br><span class="line">      wx.hideLoading()</span><br><span class="line"></span><br><span class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        wx.navigateBack()</span><br><span class="line">      &#125;, <span class="number">2000</span>)</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="在云函数productDetail的index-js文件中"><a href="#在云函数productDetail的index-js文件中" class="headerlink" title="在云函数productDetail的index.js文件中"></a>在云函数productDetail的<code>index.js</code>文件中</h3><ol>
+<li><p>定义数据库函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> db = cloud.database()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在exports.main中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> id = event.id</span><br><span class="line"></span><br><span class="line"><span class="comment">// product detail</span></span><br><span class="line">  <span class="keyword">const</span> productRes = <span class="keyword">await</span> db.collection(<span class="string">'product'</span>).doc(id).get()</span><br><span class="line">  <span class="keyword">const</span> product = productRes.data</span><br><span class="line">  <span class="keyword">return</span> product</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="在home-index-wxml中的navigator标签添加url"><a href="#在home-index-wxml中的navigator标签添加url" class="headerlink" title="在home/index.wxml中的navigator标签添加url"></a>在<code>home/index.wxml</code>中的<code>navigator</code>标签添加url</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">url</span>=<span class="string">"/pages/detail/detail?id=&#123;&#123;productList[0]._id&#125;&#125;"</span> <span class="attr">class</span>=<span class="string">'hot-card'</span>&gt;</span><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">url</span>=<span class="string">"/pages/detail/detail?id=&#123;&#123;pitem._id&#125;&#125;"</span> <span class="attr">class</span>=<span class="string">'product-card'</span>&gt;</span><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="封装云函数"><a href="#封装云函数" class="headerlink" title="封装云函数"></a>封装云函数</h3><ol>
+<li>在<code>miniprogram</code>下，新建<code>utils</code>文件夹</li>
+<li>在<code>utils</code>文件夹下，新建<code>db.js</code>, <code>util.js</code></li>
+<li>封装常用的云函数</li>
+</ol>
+<p>(1) 封装<code>db.js</code></p>
+<ul>
+<li><p><code>db.js</code><br>将这里的<code>env</code>换成自己的环境 ID。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> db = wx.cloud.database(&#123;</span><br><span class="line">  env: <span class="string">'XXX-123'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    getProductList() &#123;</span><br><span class="line">        <span class="keyword">return</span> db.collection(<span class="string">'product'</span>).get()</span><br><span class="line">    &#125;,</span><br><span class="line">    getProductDetail(id) &#123;</span><br><span class="line">        <span class="keyword">return</span> wx.cloud.callFunction(&#123;</span><br><span class="line">        name: <span class="string">'productDetail'</span>,</span><br><span class="line">        data: &#123;</span><br><span class="line">            id: id</span><br><span class="line">        &#125;,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>home.js</code>, <code>detail.js</code>进行引用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> db = <span class="built_in">require</span>(<span class="string">'../../utils/db'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>details.js</code> 中，封装<code>getProductDetail</code>函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">getProductDetail(id)&#123;</span><br><span class="line">    wx.showLoading(&#123;</span><br><span class="line">      title: <span class="string">'Loading...'</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    db.getProductDetail(id).then(<span class="function"><span class="params">result</span> =&gt;</span> &#123;</span><br><span class="line">      wx.hideLoading()</span><br><span class="line">      <span class="keyword">const</span> data = result.result</span><br><span class="line">      <span class="keyword">if</span> (data) &#123;</span><br><span class="line">        <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">          product: data</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">          wx.navigateBack()</span><br><span class="line">        &#125;, <span class="number">2000</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(err)</span><br><span class="line">      wx.hideLoading()</span><br><span class="line"></span><br><span class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        wx.navigateBack()</span><br><span class="line">      &#125;, <span class="number">2000</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>(2) 封装<code>util.js</code></p>
+<ul>
+<li><p>在<code>util.js</code>中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  priceFormat(price) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">parseFloat</span>(<span class="built_in">Math</span>.round(price * <span class="number">100</span>) / <span class="number">100</span>).toFixed(<span class="number">2</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>home.js</code>中</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">'../../utils/util'</span>)</span><br><span class="line"></span><br><span class="line">data.forEach(<span class="function"><span class="params">product</span> =&gt;</span> product.price = util.priceFormat(product.price))</span><br></pre></td></tr></table></figure>
+<h3 id="个人中心"><a href="#个人中心" class="headerlink" title="个人中心"></a>个人中心</h3><h4 id="基础组建搭建"><a href="#基础组建搭建" class="headerlink" title="基础组建搭建"></a>基础组建搭建</h4><p><code>me.wxml</code>中通过条件渲染，根据<code>userInfo</code>是否为空判定用户是否登陆</p>
+<ul>
+<li><p><code>me.wxml</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--pages/me/me.wxml--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"bg"</span> <span class="attr">src</span>=<span class="string">"/images/bg.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;!userInfo&#125;&#125;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"user-card"</span> <span class="attr">wx:else</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>me.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">    userInfo: <span class="literal">null</span>,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>me.wxml</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;!userInfo&#125;&#125;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-card"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-head"</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-info"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-text"</span>&gt;</span>Not Login<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-tips"</span>&gt;</span>Click "Login" with WeChat account to shop<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"login-btn"</span>&gt;</span>Login<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>me.wxss</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.login-card</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">50</span>rpx <span class="number">27</span>rpx <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">2</span>rpx <span class="number">13</span>rpx <span class="number">5</span>rpx <span class="built_in">rgba</span>(0, 0, 0, 0.02);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">13</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.login-head</span> &#123;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">53</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#F5E069</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.login-info</span> &#123;</span><br><span class="line">  <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">31</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.login-text</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">48</span>rpx;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">34</span>rpx;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(29, 29, 38, 0.8);</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.login-tips</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">6</span>rpx;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">33</span>rpx;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">24</span>rpx;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#8B8B8B</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.login-btn</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">34</span>rpx auto <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">250</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">80</span>rpx;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">80</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#F5E069</span>;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10</span>rpx;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">30</span>rpx;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#34373D</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.login-btn</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>me.json</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"navigationBarTitleText"</span>: <span class="string">"Me"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="登陆页面逻辑"><a href="#登陆页面逻辑" class="headerlink" title="登陆页面逻辑"></a>登陆页面逻辑</h4><p>微信的小程序在 <code>button</code> 按钮中附加了很多开发功能。其中，我们可以设置 <code>button</code> 中 <code>open-type</code> 的属性为 <code>getUserInfo</code> 来实现获取用户信息的功能。在 <code>button</code> 加入属性 <code>&lt;bindgetuserinfo=&quot;onTapLogin&quot;&gt;</code> 来设置事件来获取用户信息并更新我们的数据。</p>
+<ul>
+<li><code>me.wxml</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"login-btn"</span> <span class="attr">open-type</span>=<span class="string">"getUserInfo"</span> <span class="attr">bindgetuserinfo</span>=<span class="string">"onTapLogin"</span>&gt;</span>Login<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>me.js</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">onTapLogin(event) &#123;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">        userInfo: event.detail.userInfo</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<h4 id="登陆后搭建"><a href="#登陆后搭建" class="headerlink" title="登陆后搭建"></a>登陆后搭建</h4><ul>
+<li><code>me.wxml</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- user-card中 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"user-info"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"user-head"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;userInfo.avatarUrl&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"user-name"</span>&gt;</span>&#123;&#123;userInfo.nickName&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"user-split"</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"user-options"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"option"</span> <span class="attr">bindtap</span>=<span class="string">"onTapAddress"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"option-title"</span>&gt;</span>Your Addresses<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"option-arrow"</span> <span class="attr">src</span>=<span class="string">"/images/grey-arrow.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"option"</span> <span class="attr">bindtap</span>=<span class="string">"onTapService"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"option-title"</span>&gt;</span>Contact Customer Service<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"option-arrow"</span> <span class="attr">src</span>=<span class="string">"/images/grey-arrow.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>me.wxss</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.user-card</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">50</span>rpx <span class="number">27</span>rpx <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">2</span>rpx <span class="number">13</span>rpx <span class="number">5</span>rpx <span class="built_in">rgba</span>(0, 0, 0, 0.02);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">13</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.user-info</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.user-head</span> &#123;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">53</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#F5E069</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.user-name</span> &#123;</span><br><span class="line">  <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">31</span>rpx;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.user-split</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">8</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#F9F9F9</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.user-options</span> <span class="selector-class">.option</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">46</span>rpx;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">27</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">128</span>rpx;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="built_in">rgba</span>(151, 151, 151, 0.2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.user-options</span> <span class="selector-class">.option</span><span class="selector-pseudo">:last-child</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.user-options</span> <span class="selector-class">.option-title</span> &#123;</span><br><span class="line">  <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">30</span>rpx;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(29, 29, 38, 0.8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.user-options</span> <span class="selector-class">.option-arrow</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">11</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">18</span>rpx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="设置未开放信息"><a href="#设置未开放信息" class="headerlink" title="设置未开放信息"></a>设置未开放信息</h4><ul>
+<li><code>me.js</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">onTapAddress() &#123;</span><br><span class="line">    wx.showToast(&#123;</span><br><span class="line">      icon: <span class="string">'none'</span>,</span><br><span class="line">      title: <span class="string">'This function is not open yet.'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,onTapService() &#123;</span><br><span class="line">    wx.showToast(&#123;</span><br><span class="line">      icon: <span class="string">'none'</span>,</span><br><span class="line">      title: <span class="string">'This function is not open yet.'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<h4 id="检查用户信息"><a href="#检查用户信息" class="headerlink" title="检查用户信息"></a>检查用户信息</h4><ul>
+<li><code>util.js</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">getUserInfo() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      wx.getSetting(&#123;</span><br><span class="line">        success(res) &#123;</span><br><span class="line">          <span class="keyword">if</span> (res.authSetting[<span class="string">'scope.userInfo'</span>] === <span class="literal">false</span>) &#123;</span><br><span class="line">            <span class="comment">// 已拒绝授权</span></span><br><span class="line">            reject()</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            wx.getUserInfo(&#123;</span><br><span class="line">              success(res) &#123;</span><br><span class="line">                <span class="keyword">const</span> userInfo = res.userInfo</span><br><span class="line">                resolve(userInfo)</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>me.js</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">'../../utils/util'</span>)</span><br><span class="line"></span><br><span class="line">onShow: <span class="function"><span class="keyword">function</span> </span>&#123;</span><br><span class="line">    util.getUserInfo().then(<span class="function"><span class="params">userInfo</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">        userInfo</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<h4 id="将登陆定义为自定义组件"><a href="#将登陆定义为自定义组件" class="headerlink" title="将登陆定义为自定义组件"></a>将登陆定义为自定义组件</h4><h5 id="创建组件"><a href="#创建组件" class="headerlink" title="创建组件"></a>创建组件</h5><ul>
+<li>创建<code>components</code>目录</li>
+<li>创建<code>login</code>目录</li>
+<li>右键–&gt;新增 <code>components</code></li>
+</ul>
+<h5 id="引用组件"><a href="#引用组件" class="headerlink" title="引用组件"></a>引用组件</h5><ul>
+<li><code>me.json</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"usingComponents"</span>: &#123;</span><br><span class="line">    <span class="string">"login"</span>:<span class="string">"/components/login/login"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>me.wxml</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-card"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-head"</span>&gt;</span><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-info"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-text"</span>&gt;</span>Not Login<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"login-tips"</span>&gt;</span>Click "Login" with WeChat account to shop<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"login-btn"</span> <span class="attr">open-type</span>=<span class="string">"getUserInfo"</span> <span class="attr">bindgetuserinfo</span>=<span class="string">"onTapLogin"</span>&gt;</span>Login<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>login.js</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">    onTapLogin(event) &#123;</span><br><span class="line">      <span class="keyword">const</span> loginDetail = &#123;</span><br><span class="line">        userInfo: event.detail.userInfo</span><br><span class="line">      &#125; <span class="comment">// detail object, Provided to the event listener function</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">this</span>.triggerEvent(<span class="string">'onLogin'</span>, loginDetail)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>order.json</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"navigationBarTitleText"</span>: <span class="string">"Order"</span>,</span><br><span class="line">  <span class="string">"usingComponents"</span>: &#123;</span><br><span class="line">    <span class="string">"login"</span>: <span class="string">"/components/login/login"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>order.wxml</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;!userInfo&#125;&#125;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">login</span> <span class="attr">bindonLogin</span>=<span class="string">"onTapLogin"</span>&gt;</span><span class="tag">&lt;/<span class="name">login</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>order.js</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// pages/order/order.js</span></span><br><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">'../../utils/util'</span>)</span><br><span class="line"></span><br><span class="line">Page(&#123;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* Page initial data</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">data: &#123;</span><br><span class="line">userInfo: <span class="literal">null</span>,</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">onShow() &#123;</span><br><span class="line">util.getUserInfo().then(<span class="function"><span class="params">userInfo</span> =&gt;</span> &#123;</span><br><span class="line"><span class="keyword">this</span>.setData(&#123;</span><br><span class="line">userInfo</span><br><span class="line">&#125;)</span><br><span class="line">&#125;)</span><br><span class="line">&#125;,</span><br><span class="line"></span><br><span class="line">onTapLogin(event) &#123;</span><br><span class="line"><span class="keyword">this</span>.setData(&#123;</span><br><span class="line">userInfo: event.detail.userInfo</span><br><span class="line">&#125;)</span><br><span class="line">&#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="订单"><a href="#订单" class="headerlink" title="订单"></a>订单</h3><h4 id="无订单的页面"><a href="#无订单的页面" class="headerlink" title="无订单的页面"></a>无订单的页面</h4><ul>
+<li><code>order.wxml</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-empty"</span> <span class="attr">wx:elif</span>=<span class="string">"&#123;&#123;orderList.length === 0&#125;&#125;"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"empty-image"</span> <span class="attr">src</span>=<span class="string">"/images/order.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"empty-text"</span>&gt;</span>You don't have any order yet.<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>order.wxss</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.order-empty</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">37</span>rpx <span class="number">27</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">431</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">2</span>rpx <span class="number">13</span>rpx <span class="number">5</span>rpx <span class="built_in">rgba</span>(0, 0, 0, 0.02);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">13</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.empty-image</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">29</span>rpx;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">90</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">90</span>rpx;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.empty-text</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">28</span>rpx;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">40</span>rpx;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(139, 139, 139, 0.8);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="有订单的订单页面"><a href="#有订单的订单页面" class="headerlink" title="有订单的订单页面"></a>有订单的订单页面</h4><ul>
+<li><code>order.wxml</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:else</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-head"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"order-head-line"</span> <span class="attr">src</span>=<span class="string">"/images/line-black.png"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-head-text"</span>&gt;</span>Completed<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-block"</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;orderList&#125;&#125;"</span> <span class="attr">wx:for-item</span>=<span class="string">"block"</span> <span class="attr">wx:key</span>=<span class="string">"id"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-card"</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;block.productList&#125;&#125;"</span> <span class="attr">wx:key</span>=<span class="string">"name"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">"order-image"</span> <span class="attr">mode</span>=<span class="string">"widthFix"</span> <span class="attr">src</span>=<span class="string">"&#123;&#123;item.image&#125;&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-info"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-name"</span>&gt;</span>&#123;&#123;item.name&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-price"</span>&gt;</span>$ &#123;&#123;item.price&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-opr"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-btn"</span>&gt;</span>Reviews<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"order-count"</span>&gt;</span>x&#123;&#123;item.count&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>order.wxss</code></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.order-head</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">26</span>rpx <span class="number">29</span>rpx <span class="number">14</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-head-line</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">21</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">34</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-head-text</span> &#123;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">10</span>rpx;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">24</span>rpx;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">33</span>rpx;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(52, 55, 61, 0.8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-block</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">26</span>rpx <span class="number">26</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">2</span>rpx <span class="number">13</span>rpx <span class="number">5</span>rpx <span class="built_in">rgba</span>(0, 0, 0, 0.02);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">13</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-card</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">20</span>rpx;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">20</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200</span>rpx;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">1</span>rpx solid <span class="built_in">rgba</span>(151, 151, 151, 0.2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-card</span><span class="selector-pseudo">:last-child</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-image</span> &#123;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">160</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">160</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-info</span> &#123;</span><br><span class="line">  <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">27</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">28</span>rpx;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">40</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-name</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(29, 29, 38, 0.8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-price</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">12</span>rpx;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-opr</span> &#123;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: <span class="number">59</span>rpx;</span><br><span class="line">  <span class="attribute">padding-top</span>: <span class="number">34</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">28</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-btn</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">140</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">52</span>rpx;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">52</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#F5E069</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">8</span>rpx;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.order-count</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">49</span>rpx;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">40</span>rpx;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">text-align</span>: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后一个元素，边界线线会消失，使用<code>last-child</code>表示。</p>
+<h3 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h3><h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h3>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='ec894e2b66f752e8b7fb'
+        data-cs='3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+        data-r='blog-comments'
+        data-o='TriDiamond'
+        data-a='TriDiamond'
+        data-d=''
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Sam Chen, chenzhenghe</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        <dd><a href="https://github.com/TriDiamond" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/TriDiamond6" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="https://stackoverflow.com/users/7602324/tridiamond?tab=profile" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">9 <p>Articles</p></a></li>
+                    <li><a href="/categories">4 <p>Categories</p></a></li>
+                    <li><a href="/tags">18 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hello-World"><span class="toc-number">1.</span> <span class="toc-text">Hello World</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册账号"><span class="toc-number">1.1.</span> <span class="toc-text">注册账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序基础"><span class="toc-number">1.2.</span> <span class="toc-text">小程序基础</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#天气小程序"><span class="toc-number">2.</span> <span class="toc-text">天气小程序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用网络数据"><span class="toc-number">2.1.</span> <span class="toc-text">使用网络数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构建列表"><span class="toc-number">2.2.</span> <span class="toc-text">构建列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二个页面"><span class="toc-number">2.3.</span> <span class="toc-text">第二个页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取位置"><span class="toc-number">2.4.</span> <span class="toc-text">获取位置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#商城小程序"><span class="toc-number">3.</span> <span class="toc-text">商城小程序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#首页"><span class="toc-number">3.1.</span> <span class="toc-text">首页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#详情页"><span class="toc-number">3.2.</span> <span class="toc-text">详情页</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用云函数"><span class="toc-number">3.2.1.</span> <span class="toc-text">使用云函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在details-js文件onLoad生命周期函数中"><span class="toc-number">3.2.2.</span> <span class="toc-text">在details.js文件onLoad生命周期函数中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在云函数productDetail的index-js文件中"><span class="toc-number">3.2.3.</span> <span class="toc-text">在云函数productDetail的index.js文件中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在home-index-wxml中的navigator标签添加url"><span class="toc-number">3.2.4.</span> <span class="toc-text">在home/index.wxml中的navigator标签添加url</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#封装云函数"><span class="toc-number">3.2.5.</span> <span class="toc-text">封装云函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#个人中心"><span class="toc-number">3.2.6.</span> <span class="toc-text">个人中心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#订单"><span class="toc-number">3.2.7.</span> <span class="toc-text">订单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#购物车"><span class="toc-number">3.2.8.</span> <span class="toc-text">购物车</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论"><span class="toc-number">3.2.9.</span> <span class="toc-text">评论</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            Sam Chen, chenzhenghe
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.4" target="_blank" rel="noopener">v1.4.4</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ <link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css"> <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script> <script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script> <script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script> <script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>  <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>  <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>  <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>  <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>  <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>  <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>  <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>   <script src="/js/busuanzi.min.js"></script>
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ <link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149874671-1');
+</script>
+ 
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['Think like an artist, develop like an artisan', '艺术家思维去思考问题，工匠创造精神去开发'],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+</html>
