@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,7 +16,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2019/11 - Sam&#39;s Blog</title>
+  <title>Python零基础入门(4) - 运算符 - Sam&#39;s Blog</title>
+  
+    <meta name="keywords" content="python">
   
 
   
@@ -294,7 +294,7 @@
 
   
   
-      <div class='cover-wrapper  dock' style="display: none;">
+      <div class='cover-wrapper post dock' style="display: none;">
         
           <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
         
@@ -353,8 +353,8 @@
 
 
 <div id="pjax-data" style="display: none">
-  <div id="pjax-ispage">false</div>
-  <div id="pjax-pageTitle"></div>
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">Python零基础入门(4) - 运算符</div>
   <div id="pjax-enable-cover">true</div>
   <div id="pjax-comment-path">none</div>
   <div id="pjax-comment-placeholder">none</div>
@@ -363,14 +363,14 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("blog" == "none") { // 移除封面
+  if ("none" == "none") { // 移除封面
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("blog" == "blog") { // 半屏
+    if ("none" == "blog") { // 半屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("blog" == "docs") { // 全屏
+    } else if ("none" == "docs") { // 全屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
       document.getElementsByClassName('scroll-down')[0].style.display = "";
     }
@@ -384,432 +384,226 @@
         
 
 <div class='l_main'>
-	
-		
-  <section class="post-list ">
+  
+
+  
+    <article id="post" class="post white-box reveal md shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <div class='article-header'>
     
       
+      <div class="article-meta" id="top">
         
+        
+        
+          <h1 class="title">
+            <a href="/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/">
+              Python零基础入门(4) - 运算符
+            </a>
+          </h1>
+        
+        <div class='new-meta-box'>
           
-        
+            
           
-        
+            
+              
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>请设置文章作者</p>
+  </a>
+</div>
+
+            
           
-        
+            
+              
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/python/">python</a>
+    </a>
+  </div>
+
+
+            
           
-        
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Aug 25, 2020</p>
+  </a>
+</div>
+
+            
           
-        
+            
           
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/15/cheatsheet-SQL-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB%E7%AC%94%E8%AE%B0/">
-        [Cheatsheet] SQL语法汇总笔记
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        处理日期1from_unixtime(unix_timestamp(substr(order_week,1,8) ,'yyyyMMdd'), 'yyyy-MM-dd')
-      
+        </div>
+      </div>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-15</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/cheatsheet/">cheatsheet</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/15/cheatsheet-SQL-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB%E7%AC%94%E8%AE%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/08/cheatsheet-Markdown-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB%E7%AC%94%E8%AE%B0/">
-        [Cheatsheet] Markdown语法汇总笔记
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        表格
-语法
-
-1234|  表头   | 表头  ||  ----  | ----  || 单元格  | 单元格 || 单元格  | 单元格 |
-
-呈现结果
 
 
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <h3 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h3><ul>
+<li>拼接字符串</li>
+<li>参数传递</li>
+<li>占位符</li>
+<li>格式化</li>
+</ul>
+<h4 id="1-拼接字符串"><a href="#1-拼接字符串" class="headerlink" title="1. 拼接字符串"></a>1. 拼接字符串</h4><ul>
+<li>注意：仅能拼接一样的类型。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hi, '</span></span><br><span class="line">b = <span class="string">'Sam'</span></span><br><span class="line">s = a + b</span><br><span class="line">print(s)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hi, Sam'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="2-参数传递"><a href="#2-参数传递" class="headerlink" title="2. 参数传递"></a>2. 参数传递</h4><ul>
+<li><code>print()</code>函数，传入多个参数<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hello '</span></span><br><span class="line">b = <span class="string">'world!'</span></span><br><span class="line">print(a,b)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hello world!'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="3-占位符"><a href="#3-占位符" class="headerlink" title="3. 占位符"></a>3. 占位符</h4><p>使用 <code>%</code></p>
+<ul>
+<li><code>%s</code> 任意的字符</li>
+<li><code>%f</code> 任意的消暑</li>
+<li><p><code>%d</code> 任意的整数</p>
+</li>
+<li><p>例1: 格式化字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'I love %s'</span></span><br><span class="line">a % <span class="string">'大鸡腿'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'I love 大鸡腿'</span></span><br></pre></td></tr></table></figure></li>
+<li>例2：多个格式化字符串<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'%s, %s'</span> % (<span class="string">'hello'</span>, <span class="string">'world'</span>)</span><br><span class="line">print(s)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hello world'</span></span><br></pre></td></tr></table></figure>
+<h4 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h4></li>
+</ul>
+<ol>
+<li>使用<code>f-string</code><br>在<code>{}</code>放入参数名称，并且定义<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="string">'钢铁侠'</span></span><br><span class="line">s2 = <span class="string">'葫芦娃'</span></span><br><span class="line">print(<span class="string">f'hello <span class="subst">&#123;s1&#125;</span>, <span class="subst">&#123;s2&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hello 钢铁侠, 葫芦娃'</span></span><br></pre></td></tr></table></figure></li>
+<li>使用 <code>.format()</code><br>其中 <code>{}</code>中可以添加数字。<br>添加的数据将从<code>format()</code>中，从0开始，获取第n个数据</li>
+</ol>
+<ul>
+<li>例1：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'I love &#123;&#125;'</span></span><br><span class="line">a = s.format(<span class="string">'you'</span>)</span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'I love you'</span></span><br></pre></td></tr></table></figure></li>
+<li>例2：<br><code>{0}</code> 即为 <code>format()</code>中第一个传入的数据 <code>&#39;honey&#39;</code><br><code>{1}</code> 即为 <code>format()</code>中第二个传入的数据 <code>&#39;you&#39;</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'I love &#123;1&#125;, &#123;0&#125;'</span></span><br><span class="line">a = s.format(<span class="string">'honey'</span>,<span class="string">'you'</span>)</span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'I love you, honey'</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符串相关的函数"><a href="#字符串相关的函数" class="headerlink" title="字符串相关的函数"></a>字符串相关的函数</h3><ul>
+<li><code>.len()</code> 返回 字符串长度</li>
+<li><code>.max()</code> 返回 最大值 (比较字符串所对应的ascii值)</li>
+<li><code>.min()</code> 返回 最小值 (比较字符串所对应的ascii值)</li>
+<li><code>ord()</code> 返回 ascii 值</li>
+<li><code>.split()</code> 根据特定符号分割<br>例：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'I love you'</span></span><br><span class="line">res = s.split(<span class="string">' '</span>) <span class="comment"># 根据空格分割</span></span><br><span class="line">print(res)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="string">'I'</span>, <span class="string">'love'</span>, <span class="string">'you'</span>]</span><br></pre></td></tr></table></figure></li>
+<li><p><code>.join()</code> 拼接(连接)字符串</p>
+<ul>
+<li><code>a.join(b)</code> 代表使用a来连接b的每个字符<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'-'</span></span><br><span class="line">b = <span class="string">'xxxx'</span></span><br><span class="line">print(a.join(b))</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'x-x-x-x'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>.strip()</code> 去除所有空格</p>
+</li>
+<li><code>.lstrip()</code> 去除左边空格</li>
+<li><p><code>.rstrip()</code> 去除右边空格</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">test_str = <span class="string">' xxx '</span></span><br><span class="line">test_str.strip()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'xxx'</span></span><br><span class="line"></span><br><span class="line">test_str.lstrip()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'xxx '</span></span><br><span class="line"></span><br><span class="line">test_str.rstrip()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">' x'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>.upper()</code> 全部转化为大写</p>
+</li>
+<li><code>.lower()</code> 全部转化为小写</li>
+<li><code>.islower()</code> 是否全部小写(1=是；0=否)</li>
+<li><code>.isupper()</code> 是否全部大写(1=是；0=否)<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Python'</span>.upper()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'PYTHON'</span></span><br><span class="line"></span><br><span class="line"><span class="string">'Python'</span>.lower()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'python'</span></span><br><span class="line"></span><br><span class="line"><span class="string">'python'</span>.islower()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="string">'Python'</span>.isupper()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><ul>
+<li><code>+</code> 加法<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'hello '</span> + <span class="string">'world'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hello world'</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> + <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>-</code> 减法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> - <span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p>备注：<code>True = 1</code></p>
+</li>
+<li><p><code>*</code> 乘法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a'</span> * <span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'aa'</span></span><br></pre></td></tr></table></figure></li>
+<li><code>/</code> 除法 ：返回浮点(<code>float</code>)类型<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>/<span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1.5</span></span><br></pre></td></tr></table></figure></li>
+<li><code>//</code> 除法取整：返回整数部分<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span>//<span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+<li><code>%</code> 取模(余数)<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span> % <span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span></span><br></pre></td></tr></table></figure></li>
+<li><code>**</code> 幂次运算<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>**<span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">8</span></span><br><span class="line"></span><br><span class="line"><span class="number">4</span> ** <span class="number">0.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><ul>
+<li><code>=</code> 将右侧的值，赋值给左边的值</li>
+<li><code>+=</code>： <code>x+=y</code>相当于 <code>x = x +y</code> 的简写</li>
+<li><code>-=</code>： <code>x-=y</code>相当于 <code>x = x -</code>y 的简写</li>
+<li><code>*=</code>： <code>x*=y</code>相当于 <code>x = x *y</code> 的简写</li>
+<li><code>/=</code>： <code>x/=y</code>相当于 <code>x = x / y</code> 的简写<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">5</span></span><br><span class="line">x += <span class="number">3</span></span><br><span class="line">print(x)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">8</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><ul>
+<li><code>&gt;</code> 比较左侧值的输入，是否大于右侧值</li>
+<li><code>&lt;</code> 比较左侧值的输入，是否小于右侧值</li>
+<li><code>&gt;=</code> 比较左侧值的输入，是否大于等于右侧值</li>
+<li><code>&lt;=</code> 比较左侧值的输入，是否小于等于右侧值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">a &gt; b</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>字符串的比较，比较的是字符之间的<code>ascii码值</code></p>
+<ul>
+<li>出现多个字符时，先比较第一个字符的大小<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'2'</span> &gt; <span class="string">'11'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="string">'a'</span> &gt; <span class="string">'ab'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="string">'ab'</span>&gt;<span class="string">'aa'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<code>2</code>的<code>ascii码</code>=50，<code>1</code>的<code>ascii码</code>=49<br>所以比较<code>&#39;2&#39;</code>,<code>&#39;11&#39;</code>的大小时，优先比较<code>&#39;2&#39;</code>跟<code>&#39;1&#39;</code>的<code>ascii码</code>值</li>
+</ul>
+</li>
+<li><p><code>==</code> 比较两个对象的值是否<code>相等</code></p>
+</li>
+<li><code>!=</code> 比较两个对象的值是否<code>不相等</code></li>
+<li><code>is</code> 比较两个对象是否是同一个对象，比较的是对象的id</li>
+<li><code>is not</code> 比较两个对象是否是不同对象。比较的是对象的id<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a'</span> == <span class="string">'a'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span> == <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span> <span class="keyword">is</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="string">'a'</span> <span class="keyword">is</span> <span class="string">'a'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="string">'abc'</span> <span class="keyword">is</span> <span class="keyword">not</span> <span class="string">'a'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ul>
+<li><code>not</code> 返回 <code>boolean</code> ，对<code>not</code>的右侧对象做非运算<ul>
+<li>对于非布尔值，会将其先转化成布尔值，再进行取反操作<br>例：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">123</span></span><br><span class="line">a = <span class="keyword">not</span> a</span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">not</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line">a = <span class="literal">None</span></span><br><span class="line">a = <span class="keyword">not</span> a</span><br><span class="line">print(a)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><code>and</code> ：<code>与运算</code>，是否同时成立<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">True</span> <span class="keyword">and</span> <span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="literal">True</span> <span class="keyword">and</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="literal">False</span> <span class="keyword">and</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br></pre></td></tr></table></figure></li>
+<li><code>or</code> ：<code>或运算</code>，是否其中一个成立<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">True</span> <span class="keyword">or</span> <span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="literal">True</span> <span class="keyword">or</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="literal">False</span> <span class="keyword">or</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
-
-表头
-表头
-
-
-
-
-单元格
-单元格
-
-
-单元格
-单元格
-
-
-
-表格 置中
-语法说明：
-
--: 设置内容和标题栏居右对齐。
-:- 设置内容和标题栏居左对齐。
-:-: 设置内容和标题栏居中对齐。
-
-
-语法
-
-
-1234| 左对齐 |...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/cheatsheet/">cheatsheet</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/08/cheatsheet-Markdown-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB%E7%AC%94%E8%AE%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/07/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E7%BE%8E/">
-        [课程笔记]算法与数据结构之美
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本文为极客时间的数据结构与算法之美课程的笔记。
-01 | 为什么要学习数据结构和算法？02 | 如何抓住重点，系统高效地学习数据结构与算法？03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度05 | 数组：为什么很多编程语言中数组都从0开始编号？06 | 链表（上）：如何实现LRU缓存淘汰算法?07 | 链表（...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/07/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E7%BE%8E/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/06/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/">
-        [课程笔记] 微信小程序开发
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本文为Udacity微信小程序开发课程的笔记。
-Hello World注册账号小程序基础
-微信开发者工具
-WXML
-WXSS
-
-天气小程序
-小程序基础课程，将讲授如何从0搭建天气小程序的过程。
-
-使用网络数据构建列表第二个页面获取位置商城小程序
-小程序进阶课程，将讲授如何从0搭建商城小程序的过程。
-
-首页
-将于之后更新。
-
-详情页使用云函数
-检查 package.json 中 是否包含 cl...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/06/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/05/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/">
-        Python数据分析笔记 - Python Data Analysis cheatsheet
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Pandas 技巧
-导入Excel后，获取所有工作簿信息(sheet_name)
-
-123xl = pd.ExcelFile('foo.xls')xl.sheet_names  # see all sheet namesxl.parse(sheet_name)  # read a specific sheet to DataFrame
-
-将Excel格式的数字时间，转化成 datetime
-...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/05/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/05/%E9%83%A8%E8%90%BD%E6%A0%BC%E9%87%8D%E6%96%B0%E5%BC%80%E5%BC%A0/">
-        部落格重新开张
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        2018-2019年，是我人生变动最大的两年。2018年1月，我告别了积欠工资的芬兰游戏公司 Dazzle Rocks，只身前往北京，回到互联网产业。2018年2月，加入了快手。2019年1月，加入了Redefine。2019年8月，加入了便利蜂。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%81%8C%E5%9C%BA/">职场</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/05/%E9%83%A8%E8%90%BD%E6%A0%BC%E9%87%8D%E6%96%B0%E5%BC%80%E5%BC%A0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-
-  
-
-
-	
-</div>
-<aside class='l_side'>
-  
+          
+            <div class='article_footer'>
+              
+                
   
     
     
 
-<section class="widget blogger shadow desktop mobile">
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
   <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Sam's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
+      <blockquote>
         
           
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
           
         
           
-            <a href="mailto:me@xxx.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>本文永久链接是：<a href=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/>http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/</a></p>
           
         
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=63035382"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-      </div>
+      </blockquote>
     
   </div>
 </section>
@@ -819,87 +613,191 @@ WXSS
   
     
     
+
+<section class="widget qrcode  desktop mobile">
   
 
-  <section class="widget category shadow desktop">
+  <div class='content article-entry'>
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
+        
+          height='64px'
+        ></div>
+      
+    
+      
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png'
+        
+          height='64px'
+        ></div>
+      
+    
+  </div>
+</section>
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-25T01:08:36+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Aug 25, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/&title=Python零基础入门(4) - 运算符 - Sam's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/&title=Python零基础入门(4) - 运算符 - Sam's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/&title=Python零基础入门(4) - 运算符 - Sam's Blog&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/08/23/blog-%E5%8D%9A%E5%AE%A2%E5%8F%98%E6%9B%B4%E4%B8%BB%E9%A2%98/'>
+                <p class='title'>[blog] 博客变更主题<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>博客变更主题hexo 上有很多厉害的主题，但是更新的时候，会遇到npm/node/hexo版本不匹配的情况，导致无法套用该主题，本文记录了如果更新 npm/node/hexo的方法
+更新npm1...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    
+
+  <article class="post white-box reveal comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/cheatsheet/" href="/categories/cheatsheet/"
-            id="categoriescheatsheet"
-            ><div class='name'>cheatsheet</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/python/" href="/categories/python/"
-            id="categoriespython"
-            ><div class='name'>python</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"
-            id="categoriesE695B0E68DAEE58886E69E90"
-            ><div class='name'>数据分析</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%81%8C%E5%9C%BA/" href="/categories/%E8%81%8C%E5%9C%BA/"
-            id="categoriesE8818CE59CBA"
-            ><div class='name'>职场</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"
-            id="categoriesE8AFBEE7A88BE7AC94E8AEB0"
-            ><div class='name'>课程笔记</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#格式化字符串"><span class="toc-text">格式化字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-拼接字符串"><span class="toc-text">1. 拼接字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-参数传递"><span class="toc-text">2. 参数传递</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-占位符"><span class="toc-text">3. 占位符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#格式化"><span class="toc-text">格式化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串相关的函数"><span class="toc-text">字符串相关的函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算术运算符"><span class="toc-text">算术运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赋值运算符"><span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比较运算符"><span class="toc-text">比较运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑运算符"><span class="toc-text">逻辑运算符</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Node-js/" style="font-size: 14px; color: #999">Node.js</a> <a href="/tags/SQL/" style="font-size: 14px; color: #999">SQL</a> <a href="/tags/blog/" style="font-size: 14px; color: #999">blog</a> <a href="/tags/cheatsheet/" style="font-size: 24px; color: #555">cheatsheet</a> <a href="/tags/get-started/" style="font-size: 14px; color: #999">get started</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/js/" style="font-size: 14px; color: #999">js</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/personal/" style="font-size: 14px; color: #999">personal</a> <a href="/tags/python/" style="font-size: 24px; color: #555">python</a> <a href="/tags/web/" style="font-size: 14px; color: #999">web</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%82%9F/" style="font-size: 14px; color: #999">个人感悟</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 14px; color: #999">微信小程序</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" style="font-size: 14px; color: #999">数据分析</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 14px; color: #999">数据结构</a> <a href="/tags/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/" style="font-size: 14px; color: #999">程式筆記</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/%E8%81%8C%E5%9C%BA/" style="font-size: 14px; color: #999">职场</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
 
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
       </div>

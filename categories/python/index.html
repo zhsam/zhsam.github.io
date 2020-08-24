@@ -18,7 +18,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2019/11 - Sam&#39;s Blog</title>
+  <title>Category: python - Sam&#39;s Blog</title>
   
 
   
@@ -363,14 +363,14 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("blog" == "none") { // 移除封面
+  if ("none" == "none") { // 移除封面
     document.getElementsByClassName('cover-wrapper')[0].style.display = "none";
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("blog" == "blog") { // 半屏
+    if ("none" == "blog") { // 半屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'half');
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("blog" == "docs") { // 全屏
+    } else if ("none" == "docs") { // 全屏
       document.getElementsByClassName('cover-wrapper')[0].setAttribute('id', 'full');
       document.getElementsByClassName('scroll-down')[0].style.display = "";
     }
@@ -383,25 +383,17 @@
         
         
 
+
 <div class='l_main'>
-	
-		
+  
+    
+      
   <section class="post-list ">
     
       
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
       
     
     
@@ -415,315 +407,41 @@
   
     
     <h2 class="article-title" >
-      <a href="/2019/11/15/cheatsheet-SQL-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB%E7%AC%94%E8%AE%B0/">
-        [Cheatsheet] SQL语法汇总笔记
+      <a href="/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/">
+        Python零基础入门(4) - 运算符
       </a>
     </h2>
   
   <div class='md'>
     
       
-        处理日期1from_unixtime(unix_timestamp(substr(order_week,1,8) ,'yyyyMMdd'), 'yyyy-MM-dd')
+        格式化字符串
+拼接字符串
+参数传递
+占位符
+格式化
+
+1. 拼接字符串
+注意：仅能拼接一样的类型。12345a = 'hi, 'b = 'Sam's = a + bprint(s)&gt;&gt;&gt; 'hi, Sam'
+
+
+2. 参数传递
+print()函数，传入多个参数1234a = 'hello 'b = 'world!'print(a,b)&gt;&gt;&gt; 'hello ...
       
     
   </div>
   
     <div class='meta-v3' line_style='solid'>
       <div>
-        <time>2019-11-15</time>
+        <time>2020-08-25</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/cheatsheet/">cheatsheet</a>
+          <a class="category-link" href="/categories/python/">python</a>
         
       </div>
       
         <div>
-            <a class='readmore' href='/2019/11/15/cheatsheet-SQL-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB%E7%AC%94%E8%AE%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/08/cheatsheet-Markdown-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB%E7%AC%94%E8%AE%B0/">
-        [Cheatsheet] Markdown语法汇总笔记
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        表格
-语法
-
-1234|  表头   | 表头  ||  ----  | ----  || 单元格  | 单元格 || 单元格  | 单元格 |
-
-呈现结果
-
-
-
-
-表头
-表头
-
-
-
-
-单元格
-单元格
-
-
-单元格
-单元格
-
-
-
-表格 置中
-语法说明：
-
--: 设置内容和标题栏居右对齐。
-:- 设置内容和标题栏居左对齐。
-:-: 设置内容和标题栏居中对齐。
-
-
-语法
-
-
-1234| 左对齐 |...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/cheatsheet/">cheatsheet</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/08/cheatsheet-Markdown-%E8%AF%AD%E6%B3%95%E6%B1%87%E6%80%BB%E7%AC%94%E8%AE%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/07/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E7%BE%8E/">
-        [课程笔记]算法与数据结构之美
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本文为极客时间的数据结构与算法之美课程的笔记。
-01 | 为什么要学习数据结构和算法？02 | 如何抓住重点，系统高效地学习数据结构与算法？03 | 复杂度分析（上）：如何分析、统计算法的执行效率和资源消耗？04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度05 | 数组：为什么很多编程语言中数组都从0开始编号？06 | 链表（上）：如何实现LRU缓存淘汰算法?07 | 链表（...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/07/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0-%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E7%BE%8E/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/06/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/">
-        [课程笔记] 微信小程序开发
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        本文为Udacity微信小程序开发课程的笔记。
-Hello World注册账号小程序基础
-微信开发者工具
-WXML
-WXSS
-
-天气小程序
-小程序基础课程，将讲授如何从0搭建天气小程序的过程。
-
-使用网络数据构建列表第二个页面获取位置商城小程序
-小程序进阶课程，将讲授如何从0搭建商城小程序的过程。
-
-首页
-将于之后更新。
-
-详情页使用云函数
-检查 package.json 中 是否包含 cl...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-06</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/06/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0-%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/05/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/">
-        Python数据分析笔记 - Python Data Analysis cheatsheet
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Pandas 技巧
-导入Excel后，获取所有工作簿信息(sheet_name)
-
-123xl = pd.ExcelFile('foo.xls')xl.sheet_names  # see all sheet namesxl.parse(sheet_name)  # read a specific sheet to DataFrame
-
-将Excel格式的数字时间，转化成 datetime
-...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/05/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2019/11/05/%E9%83%A8%E8%90%BD%E6%A0%BC%E9%87%8D%E6%96%B0%E5%BC%80%E5%BC%A0/">
-        部落格重新开张
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        2018-2019年，是我人生变动最大的两年。2018年1月，我告别了积欠工资的芬兰游戏公司 Dazzle Rocks，只身前往北京，回到互联网产业。2018年2月，加入了快手。2019年1月，加入了Redefine。2019年8月，加入了便利蜂。
-
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        <time>2019-11-05</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%81%8C%E5%9C%BA/">职场</a>
-        
-      </div>
-      
-        <div>
-            <a class='readmore' href='/2019/11/05/%E9%83%A8%E8%90%BD%E6%A0%BC%E9%87%8D%E6%96%B0%E5%BC%80%E5%BC%A0/'>
+            <a class='readmore' href='/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/'>
             Read More
           </a>
         </div>
@@ -747,7 +465,9 @@ WXSS
   
 
 
-	
+    
+  
+
 </div>
 <aside class='l_side'>
   
@@ -892,14 +612,6 @@ WXSS
 
 </aside>
 
-
-
-
-
-	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-	
-
-	
 
 
       </div>
