@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            Python零基础入门(4) - 运算符 | 正和&#39;s Blog
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">正和&#39;s Blog</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">关于</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">Sam Chen, chenzhenghe</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:xxx@xxx.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-steam"></i></span>
+                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">Steam</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-weibo"></i></span>
+                    <a href="https://your.url" target="_blank" rel="noopener" class="mdui-chip-title">Weibo</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a href="https://garybear.cn/hexo-theme-meadow/" target="_blank" rel="noopener" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/">Python零基础入门(4) - 运算符</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2020-08-25
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2020-08-25
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;<a class="category-link" href="/categories/python/">python</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        阅读次数:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=Python零基础入门(4) - 运算符&url=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/&pic=http://chenzhenghe.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=Python零基础入门(4) - 运算符&url=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/&via=Sam Chen, chenzhenghe" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/&title=Python零基础入门(4) - 运算符" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=正和&#39;s Blog&title=Python零基础入门(4) - 运算符&summary=&pics=http://chenzhenghe.com/null&url=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=http://chenzhenghe.com/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/&text=Python零基础入门(4) - 运算符" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/python/ >python</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <h3 id="格式化字符串"><a href="#格式化字符串" class="headerlink" title="格式化字符串"></a>格式化字符串</h3><ul>
+<li>拼接字符串</li>
+<li>参数传递</li>
+<li>占位符</li>
+<li>格式化</li>
+</ul>
+<h4 id="1-拼接字符串"><a href="#1-拼接字符串" class="headerlink" title="1. 拼接字符串"></a>1. 拼接字符串</h4><ul>
+<li>注意：仅能拼接一样的类型。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hi, '</span></span><br><span class="line">b = <span class="string">'Sam'</span></span><br><span class="line">s = a + b</span><br><span class="line">print(s)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hi, Sam'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="2-参数传递"><a href="#2-参数传递" class="headerlink" title="2. 参数传递"></a>2. 参数传递</h4><ul>
+<li><code>print()</code>函数，传入多个参数<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'hello '</span></span><br><span class="line">b = <span class="string">'world!'</span></span><br><span class="line">print(a,b)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hello world!'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="3-占位符"><a href="#3-占位符" class="headerlink" title="3. 占位符"></a>3. 占位符</h4><p>使用 <code>%</code></p>
+<ul>
+<li><code>%s</code> 任意的字符</li>
+<li><code>%f</code> 任意的消暑</li>
+<li><p><code>%d</code> 任意的整数</p>
+</li>
+<li><p>例1: 格式化字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'I love %s'</span></span><br><span class="line">a % <span class="string">'大鸡腿'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'I love 大鸡腿'</span></span><br></pre></td></tr></table></figure></li>
+<li>例2：多个格式化字符串<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'%s, %s'</span> % (<span class="string">'hello'</span>, <span class="string">'world'</span>)</span><br><span class="line">print(s)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hello world'</span></span><br></pre></td></tr></table></figure>
+<h4 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h4></li>
+</ul>
+<ol>
+<li>使用<code>f-string</code><br>在<code>{}</code>放入参数名称，并且定义<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="string">'钢铁侠'</span></span><br><span class="line">s2 = <span class="string">'葫芦娃'</span></span><br><span class="line">print(<span class="string">f'hello <span class="subst">&#123;s1&#125;</span>, <span class="subst">&#123;s2&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hello 钢铁侠, 葫芦娃'</span></span><br></pre></td></tr></table></figure></li>
+<li>使用 <code>.format()</code><br>其中 <code>{}</code>中可以添加数字。<br>添加的数据将从<code>format()</code>中，从0开始，获取第n个数据</li>
+</ol>
+<ul>
+<li>例1：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'I love &#123;&#125;'</span></span><br><span class="line">a = s.format(<span class="string">'you'</span>)</span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'I love you'</span></span><br></pre></td></tr></table></figure></li>
+<li>例2：<br><code>{0}</code> 即为 <code>format()</code>中第一个传入的数据 <code>&#39;honey&#39;</code><br><code>{1}</code> 即为 <code>format()</code>中第二个传入的数据 <code>&#39;you&#39;</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'I love &#123;1&#125;, &#123;0&#125;'</span></span><br><span class="line">a = s.format(<span class="string">'honey'</span>,<span class="string">'you'</span>)</span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'I love you, honey'</span></span><br></pre></td></tr></table></figure>
+<h3 id="字符串相关的函数"><a href="#字符串相关的函数" class="headerlink" title="字符串相关的函数"></a>字符串相关的函数</h3><ul>
+<li><code>.len()</code> 返回 字符串长度</li>
+<li><code>.max()</code> 返回 最大值 (比较字符串所对应的ascii值)</li>
+<li><code>.min()</code> 返回 最小值 (比较字符串所对应的ascii值)</li>
+<li><code>ord()</code> 返回 ascii 值</li>
+<li><code>.split()</code> 根据特定符号分割<br>例：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'I love you'</span></span><br><span class="line">res = s.split(<span class="string">' '</span>) <span class="comment"># 根据空格分割</span></span><br><span class="line">print(res)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="string">'I'</span>, <span class="string">'love'</span>, <span class="string">'you'</span>]</span><br></pre></td></tr></table></figure></li>
+<li><p><code>.join()</code> 拼接(连接)字符串</p>
+<ul>
+<li><code>a.join(b)</code> 代表使用a来连接b的每个字符<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'-'</span></span><br><span class="line">b = <span class="string">'xxxx'</span></span><br><span class="line">print(a.join(b))</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'x-x-x-x'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>.strip()</code> 去除所有空格</p>
+</li>
+<li><code>.lstrip()</code> 去除左边空格</li>
+<li><p><code>.rstrip()</code> 去除右边空格</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">test_str = <span class="string">' xxx '</span></span><br><span class="line">test_str.strip()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'xxx'</span></span><br><span class="line"></span><br><span class="line">test_str.lstrip()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'xxx '</span></span><br><span class="line"></span><br><span class="line">test_str.rstrip()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">' x'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>.upper()</code> 全部转化为大写</p>
+</li>
+<li><code>.lower()</code> 全部转化为小写</li>
+<li><code>.islower()</code> 是否全部小写(1=是；0=否)</li>
+<li><code>.isupper()</code> 是否全部大写(1=是；0=否)<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'Python'</span>.upper()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'PYTHON'</span></span><br><span class="line"></span><br><span class="line"><span class="string">'Python'</span>.lower()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'python'</span></span><br><span class="line"></span><br><span class="line"><span class="string">'python'</span>.islower()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="string">'Python'</span>.isupper()</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><ul>
+<li><code>+</code> 加法<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'hello '</span> + <span class="string">'world'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'hello world'</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> + <span class="number">1</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+<li><p><code>-</code> 减法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> - <span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p>备注：<code>True = 1</code></p>
+</li>
+<li><p><code>*</code> 乘法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a'</span> * <span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'aa'</span></span><br></pre></td></tr></table></figure></li>
+<li><code>/</code> 除法 ：返回浮点(<code>float</code>)类型<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span>/<span class="number">2</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1.5</span></span><br></pre></td></tr></table></figure></li>
+<li><code>//</code> 除法取整：返回整数部分<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span>//<span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+<li><code>%</code> 取模(余数)<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span> % <span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">1</span></span><br></pre></td></tr></table></figure></li>
+<li><code>**</code> 幂次运算<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>**<span class="number">3</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">8</span></span><br><span class="line"></span><br><span class="line"><span class="number">4</span> ** <span class="number">0.5</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><ul>
+<li><code>=</code> 将右侧的值，赋值给左边的值</li>
+<li><code>+=</code>： <code>x+=y</code>相当于 <code>x = x +y</code> 的简写</li>
+<li><code>-=</code>： <code>x-=y</code>相当于 <code>x = x -</code>y 的简写</li>
+<li><code>*=</code>： <code>x*=y</code>相当于 <code>x = x *y</code> 的简写</li>
+<li><code>/=</code>： <code>x/=y</code>相当于 <code>x = x / y</code> 的简写<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">5</span></span><br><span class="line">x += <span class="number">3</span></span><br><span class="line">print(x)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">8</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><ul>
+<li><code>&gt;</code> 比较左侧值的输入，是否大于右侧值</li>
+<li><code>&lt;</code> 比较左侧值的输入，是否小于右侧值</li>
+<li><code>&gt;=</code> 比较左侧值的输入，是否大于等于右侧值</li>
+<li><code>&lt;=</code> 比较左侧值的输入，是否小于等于右侧值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span></span><br><span class="line">b = <span class="number">2</span></span><br><span class="line">a &gt; b</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>字符串的比较，比较的是字符之间的<code>ascii码值</code></p>
+<ul>
+<li>出现多个字符时，先比较第一个字符的大小<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'2'</span> &gt; <span class="string">'11'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="string">'a'</span> &gt; <span class="string">'ab'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="string">'ab'</span>&gt;<span class="string">'aa'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<code>2</code>的<code>ascii码</code>=50，<code>1</code>的<code>ascii码</code>=49<br>所以比较<code>&#39;2&#39;</code>,<code>&#39;11&#39;</code>的大小时，优先比较<code>&#39;2&#39;</code>跟<code>&#39;1&#39;</code>的<code>ascii码</code>值</li>
+</ul>
+</li>
+<li><p><code>==</code> 比较两个对象的值是否<code>相等</code></p>
+</li>
+<li><code>!=</code> 比较两个对象的值是否<code>不相等</code></li>
+<li><code>is</code> 比较两个对象是否是同一个对象，比较的是对象的id</li>
+<li><code>is not</code> 比较两个对象是否是不同对象。比较的是对象的id<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a'</span> == <span class="string">'a'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span> == <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="number">0</span> <span class="keyword">is</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="string">'a'</span> <span class="keyword">is</span> <span class="string">'a'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="string">'abc'</span> <span class="keyword">is</span> <span class="keyword">not</span> <span class="string">'a'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ul>
+<li><code>not</code> 返回 <code>boolean</code> ，对<code>not</code>的右侧对象做非运算<ul>
+<li>对于非布尔值，会将其先转化成布尔值，再进行取反操作<br>例：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">123</span></span><br><span class="line">a = <span class="keyword">not</span> a</span><br><span class="line">print(a)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">not</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line">a = <span class="literal">None</span></span><br><span class="line">a = <span class="keyword">not</span> a</span><br><span class="line">print(a)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><code>and</code> ：<code>与运算</code>，是否同时成立<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">True</span> <span class="keyword">and</span> <span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="literal">True</span> <span class="keyword">and</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="literal">False</span> <span class="keyword">and</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br></pre></td></tr></table></figure></li>
+<li><code>or</code> ：<code>或运算</code>，是否其中一个成立<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">True</span> <span class="keyword">or</span> <span class="literal">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="literal">True</span> <span class="keyword">or</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="literal">False</span> <span class="keyword">or</span> <span class="literal">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/12/08/%E7%BD%91%E6%98%93-uni-app%E5%AE%9E%E6%88%98%E9%9F%B3%E9%A2%91%E5%B0%8F%E8%AF%B4app%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>[网易] uni-app实战音频小说app小程序</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/08/23/blog-%E5%8D%9A%E5%AE%A2%E5%8F%98%E6%9B%B4%E4%B8%BB%E9%A2%98/">
+        <span>[blog] 博客变更主题</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2020/08/25/Python%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-4-%E8%BF%90%E7%AE%97%E7%AC%A6/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#格式化字符串"><span class="toc-number">1.</span> <span class="toc-text">格式化字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-拼接字符串"><span class="toc-number">1.1.</span> <span class="toc-text">1. 拼接字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-参数传递"><span class="toc-number">1.2.</span> <span class="toc-text">2. 参数传递</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-占位符"><span class="toc-number">1.3.</span> <span class="toc-text">3. 占位符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#格式化"><span class="toc-number">1.4.</span> <span class="toc-text">格式化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串相关的函数"><span class="toc-number">2.</span> <span class="toc-text">字符串相关的函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number"></span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算术运算符"><span class="toc-number">1.</span> <span class="toc-text">算术运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#赋值运算符"><span class="toc-number">2.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比较运算符"><span class="toc-number">3.</span> <span class="toc-text">比较运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#逻辑运算符"><span class="toc-number">4.</span> <span class="toc-text">逻辑运算符</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2020 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        Sam Chen, chenzhenghe
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
