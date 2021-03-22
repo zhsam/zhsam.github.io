@@ -57,7 +57,7 @@
     
     <title>
         
-            web开发-使用SSH连接远程服务器 | 正和&#39;s BB Blog
+            web开发-部署Node.js环境（CentOS 7） | 正和&#39;s BB Blog
         
     </title>
     
@@ -230,7 +230,7 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/">web开发-使用SSH连接远程服务器</a>
+  <a class="post-header-title" href="/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/">web开发-部署Node.js环境（CentOS 7）</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
@@ -264,25 +264,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=web开发-使用SSH连接远程服务器&url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/&pic=https://chenzhenghe.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=web开发-部署Node.js环境（CentOS 7）&url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/&pic=https://chenzhenghe.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=web开发-使用SSH连接远程服务器&url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/&via=Sam Chen" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=web开发-部署Node.js环境（CentOS 7）&url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/&via=Sam Chen" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=web开发-使用SSH连接远程服务器" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/&title=web开发-部署Node.js环境（CentOS 7）" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=正和&#39;s BB Blog&title=web开发-使用SSH连接远程服务器&summary=&pics=https://chenzhenghe.com/null&url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=正和&#39;s BB Blog&title=web开发-部署Node.js环境（CentOS 7）&summary=&pics=https://chenzhenghe.com/null&url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/&text=web开发-使用SSH连接远程服务器" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/&text=web开发-部署Node.js环境（CentOS 7）" target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -303,36 +303,80 @@
       </i>
     
       <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/ssh/ >ssh</a>
-      </i>
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/ >远程连接</a>
+        <a rel="tag" href = /tags/Node-js/ >Node.js</a>
       </i>
     
   </div>
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>上一篇文章讲解怎么把<a href="https://chenzhenghe.com/2021/03/19/web%E5%BC%80%E5%8F%91-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%AD%E4%B9%B0/">namecheap域名指向阿里云ECS服务器</a>，在完成服务器的指向之后，下一步就是需要学习如何通过SSH连接远程服务器，才能在服务器上面配置、安装各种需要的文件。</p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
-<li>安装 <code>sshpass</code><br>mac 默认安装了ssh，但是如果要跟远程服务器连接，且使用明文密码，则需要安装<code>sshpass</code></li>
+    <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>终于来到了重点中的重点：在远程服务器部署Node.js环境！</p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol start="0">
+<li>使用ssh连接远程服务器<br>如果遇到困难可以参考上一篇：<a href="https://chenzhenghe.com/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/">web开发-使用SSH连接远程服务器</a></li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install hudochenkov/sshpass/sshpass</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>通过<code>sshpass</code>与ECS服务器连接</li>
+<p>想要在服务器上安装<code>Node.js</code>，主要有两个方法：</p>
+<p>一、通过nvm安装多个版本的<code>Node.js</code></p>
+<p>在服务器安装<code>Node.js</code>的常见方法是：使用<code>nvm</code>(Node Version Manager)安装<code>Node.js</code>。为了安装<code>nvm</code>，我们可以先安装<code>git</code></p>
+<ol>
+<li><p>git的安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>nvm的安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/cnpm/nvm.git ~/.nvm &amp;&amp; <span class="built_in">cd</span> ~/.nvm &amp;&amp; git checkout `git describe --abbrev=0 --tags`</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>激活nvm</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">". ~/.nvm/nvm.sh"</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装多个版本的Node.js</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install v6.9.5</span><br><span class="line">nvm install v7.4.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指定特定版本的Node.js</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use v7.4.0</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshpass -p 'YourPassword' ssh user@host</span><br></pre></td></tr></table></figure>
-<p>在阿里云的<a href="https://ecs.console.aliyun.com/" target="_blank" rel="noopener">管控台(console)</a>，<br>更多 -&gt; 密码/密钥 -&gt; 修改远程连接（VNC）密码</p>
-<p>设置好远程连接密码后，就可以通过sshpass连接远程服务器了！</p>
+<p>同场加映：在Godaddy的服务器上部署Node.js也是使用nvm，因为从<code>cPanel</code>进入之后，没有<code>root</code>权限。<br>参考这篇：<a href="https://chenzhenghe.com/2021/03/18/web%E5%BC%80%E5%8F%91-%E5%9C%A8GoDaddy%E4%B8%8A%E9%83%A8%E7%BD%B2Nodejs%E5%BA%94%E7%94%A8/">web开发-在GoDaddy上部署Nodejs应用</a></p>
+<p>二、使用二进制文件安装<code>Node.js</code></p>
+<ol>
+<li><p>下载Node.js安装包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nodejs.org/dist/v6.9.5/node-v6.9.5-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解压缩</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf node-v6.9.5-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建软链接（在任意目录下直接使用node和npm命令）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s /root/node-v6.9.5-linux-x64/bin/node /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">ln -s /root/node-v6.9.5-linux-x64/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看node、npm版本。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果要安装到其他目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /opt/node/</span><br><span class="line">mv /root/node-v6.9.5-linux-x64/* /opt/node/</span><br><span class="line">rm -f /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">rm -f /usr/<span class="built_in">local</span>/bin/npm</span><br><span class="line">ln -s /opt/node/bin/node /usr/<span class="built_in">local</span>/bin/node</span><br><span class="line">ln -s /opt/node/bin/npm /usr/<span class="built_in">local</span>/bin/npm</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="部署测试"><a href="#部署测试" class="headerlink" title="部署测试"></a>部署测试</h2><ol>
+<li><p>创建<code>example.js</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">touch example.js</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用vim / vi修改项目文件example.js</p>
+</li>
+</ol>
+<p>2.1 进入项目文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim example.js</span><br><span class="line">vi example.js</span><br></pre></td></tr></table></figure></p>
+<p>2.2 粘贴示例代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const http = require(<span class="string">'http'</span>);</span><br><span class="line">const hostname = <span class="string">'0.0.0.0'</span>;</span><br><span class="line">const port = 3000;</span><br><span class="line">const server = http.createServer((req, res) =&gt; &#123; </span><br><span class="line">    res.statusCode = 200;</span><br><span class="line">    res.setHeader(<span class="string">'Content-Type'</span>, <span class="string">'text/plain'</span>);</span><br><span class="line">    res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&#125;); </span><br><span class="line"></span><br><span class="line">server.listen(port, hostname, () =&gt; &#123; </span><br><span class="line">    console.log(`Server running at http://<span class="variable">$&#123;hostname&#125;</span>:<span class="variable">$&#123;port&#125;</span>/`);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>2.3 保存文件<br>点击<code>esc</code>，然后输入<code>:wq</code>，再按<code>enter</code>，即可保存刚才的编辑。</p>
+<p>备注：如果不保存，则使用<code>:qa!</code></p>
 <ol start="3">
-<li>如果要登出，使用<code>ctrl</code>+<code>D</code></li>
+<li><p>运行项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node ~/example.js &amp;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查项目端口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tpln</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>尝试访问<br>在浏览器中，访问以下地址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;&lt;ECS实例公网IP地址&gt;:端口号</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://stackoverflow.com/questions/32255660/how-to-install-sshpass-on-mac" target="_blank" rel="noopener">How to install sshpass on mac?</a></li>
-<li><a href="https://help.aliyun.com/document_detail/25433.html?spm=a2c4g.11186623.6.692.919ca4f2ilHUqF" target="_blank" rel="noopener">通过密码认证登录Linux实例</a></li>
-<li><a href="https://help.aliyun.com/document_detail/51798.html" target="_blank" rel="noopener">使用SSH密钥对连接Linux实例</a></li>
-<li><a href="https://stackoverflow.com/questions/27598139/which-is-the-most-gentle-way-to-end-a-ssh-session" target="_blank" rel="noopener">Which is the most gentle way to end a ssh session</a></li>
+<li><a href="https://help.aliyun.com/document_detail/50775.html?spm=5176.12901015.0.i12901015.3bc3525c4rXquw" target="_blank" rel="noopener">部署Node.js环境（CentOS 7）</a></li>
 </ul>
 
   </div>
@@ -346,14 +390,9 @@
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>web开发-部署Node.js环境（CentOS 7）</span>
-      </a>
     
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2021/03/20/web%E5%BC%80%E5%8F%91-namecheap%E5%9F%9F%E5%90%8D%E6%8C%87%E5%90%91%E9%98%BF%E9%87%8C%E4%BA%91ECS/">
-        <span>web开发-namecheap域名指向阿里云ECS</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+        <span>web开发-使用SSH连接远程服务器</span>
         <i class="iconfont icon-angle-right"></i>
       </a>
     
@@ -367,8 +406,8 @@
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/2021/03/23/web%E5%BC%80%E5%8F%91-%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#步骤"><span class="toc-number">2.</span> <span class="toc-text">步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">3.</span> <span class="toc-text">参考</span></a></li></ol>
+        <a href="/2021/03/23/web%E5%BC%80%E5%8F%91-%E9%83%A8%E7%BD%B2Node-js%E7%8E%AF%E5%A2%83%EF%BC%88CentOS-7%EF%BC%89/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#背景"><span class="toc-number">1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装步骤"><span class="toc-number">2.</span> <span class="toc-text">安装步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署测试"><span class="toc-number">3.</span> <span class="toc-text">部署测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
       </li>
     </ul>
   </div>
