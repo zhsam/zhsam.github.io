@@ -238,7 +238,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2021-03-19
+      更新于:&nbsp;2021-03-20
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -344,7 +344,6 @@
 <li>如果您想使用控制面板来提供网络托管服务，那么您应该选择 CentOS。诸如 cPanel 之类的网络托管控制面板始终专注于 CentOS 和其他 RHEL 衍生产品。另一方面，Ubuntu 不支持 cPanel，但是有很多替代方案，例如Webmin / Virtualmin 或 VestaCP。</li>
 <li>企业主：CentOS 是您经营企业的理想选择，因为它的更新频率较低，因此（可以说）比 Ubuntu 更安全，更稳定。</li>
 </ul>
-<p><a href="https://cloud.tencent.com/developer/article/1763892" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1763892</a></p>
 <p>Ubuntu</p>
 <ul>
 <li>基于 Debian 架构的 Ubuntu</li>
@@ -357,10 +356,20 @@
 <li><a href="https://www.anspoon.com/centos-vs-ubuntu-5022.html" target="_blank" rel="noopener">选择 CentOS 还是 Ubuntu：你需要考虑的 15 个参数</a></li>
 <li><a href="https://cloud.tencent.com/developer/article/1763892" target="_blank" rel="noopener">CentOS 8 明年正式停止维护，以后再也不会有免费的 RHEL 了!</a></li>
 </ul>
-<h3 id="3-节点应该选择哪个区域？"><a href="#3-节点应该选择哪个区域？" class="headerlink" title="3. 节点应该选择哪个区域？"></a>3. 节点应该选择哪个区域？</h3><h4 id="参考-2"><a href="#参考-2" class="headerlink" title="参考"></a>参考</h4><ul>
+<h3 id="3-节点应该选择哪个区域？"><a href="#3-节点应该选择哪个区域？" class="headerlink" title="3. 节点应该选择哪个区域？"></a>3. 节点应该选择哪个区域？</h3><p>结论: </p>
+<ul>
+<li>面向北方用户：华北节点</li>
+<li>面向全国用户：杭州 or 上海<ul>
+<li>南方用户多：杭州</li>
+<li>北方用户多：上海</li>
+</ul>
+</li>
+</ul>
+<h4 id="参考-2"><a href="#参考-2" class="headerlink" title="参考"></a>参考</h4><ul>
 <li><a href="https://developer.aliyun.com/article/698688" target="_blank" rel="noopener">阿里云服务器选哪个地区好【小白攻略】</a></li>
 </ul>
-<h3 id="4-部署Node-js环境（CentOS-7）"><a href="#4-部署Node-js环境（CentOS-7）" class="headerlink" title="4. 部署Node.js环境（CentOS 7）"></a>4. 部署Node.js环境（CentOS 7）</h3><h4 id="参考-3"><a href="#参考-3" class="headerlink" title="参考"></a>参考</h4><ul>
+<h3 id="4-部署Node-js环境（CentOS-7）"><a href="#4-部署Node-js环境（CentOS-7）" class="headerlink" title="4. 部署Node.js环境（CentOS 7）"></a>4. 部署Node.js环境（CentOS 7）</h3><p>在阿里云上安装node.js环境，<br>跟先前在GoDaddy的远程机器安装node.js一样，<br>需要先安装nvm(node version manager)，<br>再通过nvm安装npm(node package manager)。</p>
+<h4 id="参考-3"><a href="#参考-3" class="headerlink" title="参考"></a>参考</h4><ul>
 <li><a href="https://help.aliyun.com/document_detail/50775.html?spm=a2c4g.11186623.6.1259.1e0472649rifgG" target="_blank" rel="noopener">部署Node.js环境（CentOS 7）</a></li>
 <li><a href="https://segmentfault.com/a/1190000009222141" target="_blank" rel="noopener">阿里云配置nodejs+mongodb环境</a></li>
 </ul>
@@ -378,6 +387,11 @@
   <div class="mdui-divider"></div>
   
   <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2021/03/20/web%E5%BC%80%E5%8F%91-namecheap%E5%9F%9F%E5%90%8D%E6%8C%87%E5%90%91%E9%98%BF%E9%87%8C%E4%BA%91ECS/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>web开发-namecheap域名指向阿里云ECS</span>
+      </a>
     
     
       <a rel="next" class="post-nav-item mdui-float-right" href="/2021/03/18/web%E5%BC%80%E5%8F%91-%E4%B8%BA%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AESSL/">
