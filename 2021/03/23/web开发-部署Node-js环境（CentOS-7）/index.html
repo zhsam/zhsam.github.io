@@ -322,11 +322,26 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>nvm的安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/cnpm/nvm.git ~/.nvm &amp;&amp; <span class="built_in">cd</span> ~/.nvm &amp;&amp; git checkout `git describe --abbrev=0 --tags`</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>激活nvm</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">". ~/.nvm/nvm.sh"</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+</ol>
+<p>2.1 安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/cnpm/nvm.git ~/.nvm &amp;&amp; <span class="built_in">cd</span> ~/.nvm &amp;&amp; git checkout `git describe --abbrev=0 --tags`</span><br></pre></td></tr></table></figure></p>
+<p>2.2 激活nvm<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">". ~/.nvm/nvm.sh"</span> &gt;&gt; /etc/profile</span><br><span class="line"><span class="built_in">source</span> ./etc/profile</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>遇到的问题：github被墙导致无法下载</p>
+</blockquote>
+<ul>
+<li><p>解决方案：</p>
+<ul>
+<li><p>使用curl安装安装<code>nvm</code>(node version manager)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>检查<code>nvm</code>是否安装完成</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm --version</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
 <li><p>安装多个版本的Node.js</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nvm install v6.9.5</span><br><span class="line">nvm install v7.4.0</span><br></pre></td></tr></table></figure>
 </li>
@@ -334,6 +349,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use v7.4.0</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p>备注:列出所有Node.js可用版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list-remote</span><br></pre></td></tr></table></figure></p>
 <p>同场加映：在Godaddy的服务器上部署Node.js也是使用nvm，因为从<code>cPanel</code>进入之后，没有<code>root</code>权限。<br>参考这篇：<a href="https://chenzhenghe.com/2021/03/18/web%E5%BC%80%E5%8F%91-%E5%9C%A8GoDaddy%E4%B8%8A%E9%83%A8%E7%BD%B2Nodejs%E5%BA%94%E7%94%A8/">web开发-在GoDaddy上部署Nodejs应用</a></p>
 <p>二、使用二进制文件安装<code>Node.js</code></p>
 <ol>
